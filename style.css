@@ -2,11 +2,14 @@
     margin: 0; 
     padding: 0;
     box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+    -webik-font-smoothing: antialiased;
 }
 
 :root {
     --bg-color: #f4f6fa;
     --purple: #a729f5;
+    --primary-text-color: #313e51;
     --bg-mobile: url(./assents/images/pattern-backgrund-mobile-light.svg);
 }
 
@@ -18,7 +21,7 @@ body{
 }
 
 header{
-    border: 1px solid red;
+    border: 1px ;
 
     padding: 16px 24px;
     display: flex;
@@ -51,4 +54,13 @@ background:var(--bg-color) ;
 width: 12px;
 height: 12px;
 border-radius: 999px;
+}
+
+main{
+    padding: 32px 24px;
+}
+main h1{
+    font-size: 48px;
+    font-weight:300;
+    color: var(--primary-text-color);
 }
