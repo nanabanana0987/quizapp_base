@@ -12,7 +12,7 @@ botaoTema.addEventListener("click", () => {
 verificarTema(body, botaoTema)
 
 
-const botoesAssunto = documet.querySelectorAll(.assuntos button)
+const botoesAssunto = documet.querySelectorAll(assuntos.button)
 botoesAssunto.forEach(botao => {
     botao.addEventListener("click", selecionarAssunto)
 })

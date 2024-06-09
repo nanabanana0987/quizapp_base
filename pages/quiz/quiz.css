@@ -67,6 +67,23 @@ padding: 5px;
 border-radius: 5px;
 }
 
+.assunto_icon.html{
+    background: var(--bg-html);
+}
+
+.assunto_icon.css{
+    background: var(--bg-css);
+}
+
+.assunto_icon.javascript{
+    background: var(--bg-javascript);
+}
+
+
+.assunto_icon.acessibilidade{
+    background: var(--bg-acessibilidade);
+}
+
 .assunto_icone img {
     width: 100%;
 }
