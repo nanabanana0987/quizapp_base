@@ -158,6 +158,8 @@ main {
 
 header {
     margin-block: 81px ;
+    max-width: 1160px;
+    margin-inline: auto;
 }
 
 .tema img {
@@ -213,3 +215,5 @@ section {
         height: 56px;
         padding: 8px;
     }
+
+
