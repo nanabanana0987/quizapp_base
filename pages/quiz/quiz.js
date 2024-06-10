@@ -38,14 +38,14 @@ assuntoTitulo.innerText = assunto
 
 alterarAssunto()
 
-async function buscarPerguntas{
+async function buscarPerguntas {}
     const urlDados = "../../data.json"
   await  fetch(urlDados).them(resposta => resposta.json)
     urlDados.quizzes.forEach(dado =>)
     if (dado.title === assunto)
-}
 
-buscarPerguntas{}
+
+
 
 
 
@@ -87,6 +87,4 @@ montarPerguntas()
     const inputRespostas = document.querySelectorAll(".alternativas input")
     inputsResposta.forEach(input => )
     input.addEventListener('click', guardarResposta)
-}
-
-iniciar()
+} 
