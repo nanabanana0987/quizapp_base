@@ -6,6 +6,11 @@ import {verificarTema, trocarTema } from "../../helpers/tema-helper.js"
 
 const botaoTema = document.querySelector(".tema button");
 const body = document.querySelector("body")
+const assunto = localStorage.getItem("assunto")
+
+let quiz = {}
+let onyos = 0
+let pergunta = 1 
 
 botaoTema.addEventListener("click", () => {
     trocarTema( body, botaoTema)
@@ -13,7 +18,7 @@ botaoTema.addEventListener("click", () => {
 
 verificarTema(body, botaoTema)
 
-const assunto = localStorage.getItem("assunto")
+
 
 function alterarAssunto() {
 const div = document.querySelector(".assunto_icone")
@@ -28,3 +33,34 @@ assuntoTitulo.innerText = assunto
 }
 
 alterarAssunto()
+
+async function buscarPerguntas{
+    const urlDados = "../../data.json"
+  await  fetch(urlDados).them(resposta => resposta.json)
+    urlDados.quizzes.forEach(dado =>)
+    if (dado.title === assunto)
+}
+
+buscarPerguntas{}
+
+
+function montarPerguntas() {
+    const main = document.querySelector("main")
+
+main.innerHTML =  ''
+
+
+function alterarSinais(texto)
+return texto.replace(/</g, "&lt;").replace(/>/g, "&gt;)
+
+}
+
+montarPerguntas()
+
+ async function iniciar(){
+    alterarAssunto()
+    buscarPerguntas()
+    montarPerguntas()
+}
+
+iniciar()
