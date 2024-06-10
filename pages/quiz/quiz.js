@@ -61,6 +61,13 @@ function guardarResposta(evento) {
     botaoEnviar.addEventListener("click", validarResposta)
 
     function validarResposta() {
+        const botaoEnviar = document.querySelector(".alternativas button")
+        botaoEnviar.innerText = "proxima"
+         if (pergunta === 10) {
+        botaoEnviar.innerText = "Finalizar"
+        botaoEnviar.removeEventListener("click", proximaPergunta)  // Corrigido: remover o evento de "próxima pergunta"
+        botaoEnviar.addEventListener("click", finalizar)
+    } else {
         if (resposta === quiz.questions[pergunta - 1].answer) {
             document.querySelector(`label[for='${idInputResposta}']`).setAttribute("id", "correta")
             pontos + 1
