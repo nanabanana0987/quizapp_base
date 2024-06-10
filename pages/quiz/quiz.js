@@ -58,7 +58,7 @@ function guardarResposta(evento) {}
     resposta = evento.target.value
     idInputResposta = evento.target.id
 
-    const botaoEnviar = document.querySelector(".alternativas button")
+    const botaoenviar = document.querySelector(".alternativas button")
     botaoEnviar.addEventListener("click", validarResposta)
 
     function validarResposta() {}
