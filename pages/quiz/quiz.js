@@ -13,6 +13,7 @@ let onyos = 0
 let pergunta = 1 
 let resposta = ""
 let idInputResposta = ""
+let respostaCorretaId = ""
 
 
 botaoTema.addEventListener("click", () => {
@@ -58,7 +59,15 @@ function guardarResposta(evento) {
 
     const botaoEnviar = document.querySelector(".alternativas button")
     botaoEnviar.addEventListener("click", validarResposta)
-}
+
+    function validarResposta() {
+        if (resposta === quiz.questions[pergunta - 1].answer) {
+            document.querySelector(`label[for='${idInputResposta}']`).setAttribute("id", "correta")
+            pontos + 1
+        } else {
+            document.querySelector(`label[for='${idInputResposta}']`).setAttribute("id", "errada")
+            document.querySelector(`label[for='${respostaCorretaId}']`).setAttribute("id", "correta")
+        }
 }
 
 montarPerguntas()
