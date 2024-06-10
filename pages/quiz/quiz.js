@@ -42,6 +42,7 @@ async function buscarPerguntas {}
     const urlDados = "../../data.json"
   await  fetch(urlDados).them(resposta => resposta.json)
     urlDados.quizzes.forEach(dado =>)
+
     if (dado.title === assunto)
 
 
@@ -53,14 +54,14 @@ function alterarSinais(texto) {
     return texto.replace(/</g, "&lt;").replace(/>/g, "&gt;")
 }
 
-function guardarResposta(evento) {
+function guardarResposta(evento) {}
     resposta = evento.target.value
     idInputResposta = evento.target.id
 
     const botaoEnviar = document.querySelector(".alternativas button")
     botaoEnviar.addEventListener("click", validarResposta)
 
-    function validarResposta() {
+    function validarResposta() {}
         const botaoEnviar = document.querySelector(".alternativas button")
         botaoEnviar.innerText = "proxima"
          if (pergunta === 10) {
