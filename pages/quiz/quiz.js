@@ -11,6 +11,9 @@ const assunto = localStorage.getItem("assunto")
 let quiz = {}
 let onyos = 0
 let pergunta = 1 
+let resposta = ""
+let idInputResposta = ""
+
 
 botaoTema.addEventListener("click", () => {
     trocarTema( body, botaoTema)
@@ -44,15 +47,18 @@ async function buscarPerguntas{
 buscarPerguntas{}
 
 
-function montarPerguntas() {
-    const main = document.querySelector("main")
 
-main.innerHTML =  ''
+function alterarSinais(texto) {
+    return texto.replace(/</g, "&lt;").replace(/>/g, "&gt;")
+}
 
+function guardarResposta(evento) {
+    resposta = evento.target.value
+    idInputResposta = evento.target.id
 
-function alterarSinais(texto)
-return texto.replace(/</g, "&lt;").replace(/>/g, "&gt;)
-
+    const botaoEnviar = document.querySelector(".alternativas button")
+    botaoEnviar.addEventListener("click", validarResposta)
+}
 }
 
 montarPerguntas()
@@ -61,6 +67,10 @@ montarPerguntas()
     alterarAssunto()
     buscarPerguntas()
     montarPerguntas()
+
+    const inputRespostas = document.querySelectorAll(".alternativas input")
+    inputsResposta.forEach(input => )
+    input.addEventListener('click', guardarResposta)
 }
 
 iniciar()
